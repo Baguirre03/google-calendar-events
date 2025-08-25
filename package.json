@@ -3,7 +3,7 @@
   "name": "google-calendar",
   "title": "Google Calendar",
   "description": "Create Google Calendar events using natural language powered by Raycast AI",
-  "icon": "gcal-icon.png",
+  "icon": "gcal-icon1.png",
   "author": "ben_aguirre",
   "license": "MIT",
   "commands": [
@@ -11,7 +11,7 @@
       "name": "create-event",
       "title": "Create Event",
       "subtitle": "Quick event creation",
-      "description": "Create calendar events with natural language",
+      "description": "Type your event in plain English and AI creates it instantly - 'meeting tomorrow 3pm' or 'dinner friday 7pm'",
       "mode": "no-view",
       "keywords": [
         "event",
@@ -105,9 +105,47 @@
   ],
   "preferences": [
     {
+      "name": "defaultCalendar",
+      "title": "Default Calendar",
+      "description": "Choose which calendar to create events in (use 'Select Default Calendar' command to easily pick from your calendars)",
+      "type": "textfield",
+      "required": false,
+      "placeholder": "Leave empty to use primary calendar"
+    },
+    {
+      "name": "defaultDuration",
+      "title": "Default Event Duration",
+      "description": "How long should events be when you don't specify a duration?",
+      "type": "dropdown",
+      "required": false,
+      "default": "60",
+      "data": [
+        {
+          "title": "15 minutes",
+          "value": "15"
+        },
+        {
+          "title": "30 minutes",
+          "value": "30"
+        },
+        {
+          "title": "1 hour",
+          "value": "60"
+        },
+        {
+          "title": "1.5 hours",
+          "value": "90"
+        },
+        {
+          "title": "2 hours",
+          "value": "120"
+        }
+      ]
+    },
+    {
       "name": "defaultColor",
       "title": "Default Event Color",
-      "description": "Choose the default color for new events",
+      "description": "What color should new events have by default?",
       "type": "dropdown",
       "required": false,
       "default": "1",
@@ -160,90 +198,52 @@
     },
     {
       "name": "includeDescription",
-      "title": "Include Auto-Generated Descriptions",
-      "description": "Automatically add simple descriptions to events based on the title",
+      "title": "Auto-Generate Event Descriptions",
+      "description": "Let AI automatically create helpful descriptions for your events based on the title",
       "type": "checkbox",
-      "label": "Enable descriptions",
+      "label": "Enable smart descriptions",
       "required": false,
       "default": true
     },
     {
-      "name": "defaultDuration",
-      "title": "Default Event Duration",
-      "description": "Default duration for events when not specified",
-      "type": "dropdown",
-      "required": false,
-      "default": "60",
-      "data": [
-        {
-          "title": "15 minutes",
-          "value": "15"
-        },
-        {
-          "title": "30 minutes",
-          "value": "30"
-        },
-        {
-          "title": "1 hour",
-          "value": "60"
-        },
-        {
-          "title": "1.5 hours",
-          "value": "90"
-        },
-        {
-          "title": "2 hours",
-          "value": "120"
-        }
-      ]
-    },
-    {
-      "name": "defaultCalendar",
-      "title": "Default Calendar",
-      "description": "Calendar ID to create events in (use 'Select Default Calendar' command to choose, leave empty for primary)",
-      "type": "textfield",
-      "required": false,
-      "placeholder": "example@gmail.com or calendar-id"
-    },
-    {
       "name": "enableNotifications",
-      "title": "Enable Event Notifications",
-      "description": "Add default notification reminders to new events",
+      "title": "Event Reminders",
+      "description": "Add notification reminders to new events so you never miss them",
       "type": "checkbox",
-      "label": "Enable notifications",
+      "label": "Enable reminders",
       "required": false,
       "default": true
     },
     {
       "name": "defaultReminderMinutes",
-      "title": "Default Reminder Time",
-      "description": "How many minutes before the event to show a reminder",
+      "title": "Reminder Time",
+      "description": "How early should you be reminded about events?",
       "type": "dropdown",
       "required": false,
       "default": "15",
       "data": [
         {
-          "title": "5 minutes",
+          "title": "5 minutes before",
           "value": "5"
         },
         {
-          "title": "10 minutes",
+          "title": "10 minutes before",
           "value": "10"
         },
         {
-          "title": "15 minutes",
+          "title": "15 minutes before",
           "value": "15"
         },
         {
-          "title": "30 minutes",
+          "title": "30 minutes before",
           "value": "30"
         },
         {
-          "title": "1 hour",
+          "title": "1 hour before",
           "value": "60"
         },
         {
-          "title": "1 day",
+          "title": "1 day before",
           "value": "1440"
         }
       ]

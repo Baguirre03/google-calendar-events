@@ -40,7 +40,7 @@ Return ONLY a valid JSON object with this structure:
 Input: "${input}"`;
 
   const response = await AI.ask(prompt, {
-    creativity: 0.1, // Low creativity for consistent parsing
+    creativity: 0.1,
   });
 
   try {

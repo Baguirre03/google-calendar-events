@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "google-calendar",
+  "name": "google-calendar-quickadd",
   "title": "Google Calendar",
   "description": "Create Google Calendar events using natural language powered by Raycast AI",
   "icon": "gcal-icon1.png",

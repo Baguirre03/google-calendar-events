@@ -5,9 +5,10 @@ Manage your Google Calendar events with natural language
 ## Features
 
 - **Create Events**: Use natural language to create calendar events quickly
+- **Create Tasks**: Use natural language to create all-day tasks and reminders
 - **Raycast AI-Powered Parsing**: Automatically extracts dates, times, and locations from your input using Raycast AI
 - **Color Selection**: Choose from 11 Google Calendar event colors
-- **Calendar Selection**: Create events in specific calendars
+- **Calendar Selection**: Create events and tasks in specific calendars
 - **Smart Reminders**: Configurable notification reminders
 - **Customizable Defaults**: Set your preferred colors, durations, and calendars
 
@@ -21,9 +22,20 @@ Create calendar events using natural language like:
 - "Dentist appointment Friday 2:30pm"
 - "Flight to NYC next Monday 6am"
 
+### Create Task
+
+Create tasks using natural language like:
+
+- "Buy groceries tomorrow"
+- "Call dentist next week"
+- "Submit report by Friday"
+- "Book flight next month"
+
+Tasks are created in Google Tasks and sync across all your devices.
+
 ### Select Default Calendar
 
-Choose which calendar to use as default for new events from your available Google calendars.
+Choose which calendar to use as default for new events and tasks from your available Google calendars.
 
 ## Setup
 

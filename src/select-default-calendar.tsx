@@ -16,8 +16,6 @@ export default function SelectDefaultCalendar() {
       try {
         const stored = await LocalStorage.getItem<string>("defaultCalendar");
         setCurrentDefault(stored || "primary");
-
-        // Load hidden calendars
         const hidden = await LocalStorage.getItem<string>("hiddenCalendars");
         if (hidden) {
           try {
@@ -28,7 +26,6 @@ export default function SelectDefaultCalendar() {
           }
         }
 
-        // Fetch calendars
         const token = await authorize();
         const calendarList = await getCalendarList(token);
         setCalendars(calendarList);
@@ -84,7 +81,7 @@ export default function SelectDefaultCalendar() {
       await showToast({
         style: Toast.Style.Success,
         title: "Calendars Reset",
-        message: "All calendars have been reset",
+        message: "All calendars have been reset, refresh page to see changes",
       });
     } catch (error) {
       showFailureToast(error, { title: "Failed to reset calendars" });
